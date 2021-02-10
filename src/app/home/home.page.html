@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <h3>Welcome</h3>
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar mode="ios" (ionChange)="setFilteredPhotos(searchTerm)" [placeholder]="'Search by Id or Random ipsum'" [(ngModel)]="searchTerm"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="p-photos">
+
+  <div *ngFor="let photo of photoListSearchResult">
+    <app-photo [photo]="photo"></app-photo>
+  </div>
+
+  <div *ngIf="photoListSearchResult.length === 0" class="p-photos__warning">
+    <div>
+      Sorry, there are no results for <strong>{{searchTerm}}</strong><br>Try again!
+    </div>
+  </div>
+
+</ion-content>

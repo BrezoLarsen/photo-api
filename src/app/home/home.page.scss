@@ -1,0 +1,11 @@
+.p-photos {
+  &__warning {
+    height: calc(100vh - 112px);
+    display: grid;
+    place-items: center;
+    padding: 0 32px;
+
+    text-align: center;
+    font-size: 18px;
+  }
+}
