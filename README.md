@@ -5,3 +5,9 @@
 Show generic photo list with a searchbar.
 
 [API URL](https://picsum.photos/).
+
+
+
+## Author
+
+* **Brezo A. Lozano**
